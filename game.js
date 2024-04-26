@@ -59,9 +59,9 @@ function getCPUMove() {
 }
 
 function processMove(cmd, cpu) {
-  cmd = VALID_MOVES[cmd]
   cpu = getCPUMove()
-  getWinner(cmd, cpu)
+  console.log(`You pick ${cmd}, computer picks ${cpu}.`)
+  getWinner()
 }
 
 /******************************* MAIN FUNCTION *******************************/
@@ -82,8 +82,8 @@ function promptInput(rl) {
       rl.close();
       return;
     } else if (VALID_MOVES[cmd]){
-      const validMoveKeys = Object.keys(VALID_MOVES);
-      const randomIndex = Math.floor(Math.random() * validMoveKeys.length);
+      // const validMoveKeys = Object.keys(VALID_MOVES);
+      // const randomIndex = Math.floor(Math.random() * validMoveKeys.length);
       // const cpu = validMoveKeys[randomIndex];
       
 
